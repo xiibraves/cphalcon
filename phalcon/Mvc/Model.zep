@@ -2059,7 +2059,7 @@ abstract class Model extends AbstractInjectionAware implements EntityInterface, 
     /**
      * Gets the connection used to write data to the model
      */
-    final public function getWriteConnection() -> <AdapterInterface>
+    public function getWriteConnection() -> <AdapterInterface>
     {
         var transaction;
 
@@ -2076,7 +2076,7 @@ abstract class Model extends AbstractInjectionAware implements EntityInterface, 
      * Returns the DependencyInjection connection service name used to write
      * data related to the model
      */
-    final public function getWriteConnectionService() -> string
+    public function getWriteConnectionService() -> string
     {
         return (<ManagerInterface> this->modelsManager)->getWriteConnectionService(this);
     }
